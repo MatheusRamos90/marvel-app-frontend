@@ -13,9 +13,9 @@ Os testes unitários que seriam utilizados com o Karma foram removidos do projet
 
 ## Development server
 
-Para rodar o projeto digite o comando `ng serve` no terminal do seu sistema operacional. Logo, irá carregar no navegador o projeto no endereço
+Para rodar o projeto... tenha o Git instalado em sua máquina.
+
+Logo, é só fazer o clone do repositório do Github através do comando `git clone <https://github.com/MatheusRamos90/marvel-app-frontend>`.
+
+Para rodar o projeto digite o comando `ng serve` no terminal do seu sistema operacional dentro da pasta raiz. Logo, irá carregar no navegador o projeto no endereço
 `http://localhost:4200`.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
