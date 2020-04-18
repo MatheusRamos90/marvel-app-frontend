@@ -7,7 +7,7 @@ Projeto desenvolvido com o intuito de mostrar os personagens da Marvel e ter mai
 
 A idéia é mostrar algumas coisas básicas para recrutadores e técnicos sobre minhas qualificações com Angular.
 
-Esse projeto foi gerado a partir do [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.26.
+Esse projeto foi gerado a partir do [Angular CLI](https://github.com/angular/angular-cli) versão 8.1.0.
 
 Os testes unitários que seriam utilizados com o Karma foram removidos do projeto padrão vindos a partir da criação do app.
 
