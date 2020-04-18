@@ -1,0 +1,59 @@
+<button pButton class="ui-button-secondary btn-back" (click)="onBack()" label="Voltar"><i class="pi pi-angle-left"></i> Voltar</button>
+
+<div class="app-view" *ngIf="characters">
+    <div class="app-line">
+        <h2 class="app-title-desc">Informações detalhadas:</h2>
+
+        <div class="ui-g">
+            <div class="app-content">
+                <div class="ui-g-3 app-content-left">
+                    <p class="app-avatar-size"><img [src]="characters.avatar" [alt]="characters.name" [title]="characters.name"/></p>
+                </div>
+                <div class="ui-g-7 app-content-right">
+                    <div class="app-row">
+                        <h3>Personagem:</h3>
+                        <p>{{ characters.name }}</p>
+                    </div>
+                    <div class="app-row">
+                        <h3>Nome real:</h3>
+                        <p>{{ characters.realName }}</p>
+                    </div>
+                    <div class="app-row">
+                        <h3>Descrição:</h3>
+                        <p>
+                            {{ characters.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="app-hr" />
+
+    <div class="app-line app-mt-5" *ngIf="characters.media">
+        <h2 class="app-title-desc">Filmes (mídia):</h2>
+
+        <div class="ui-g" *ngIf="characters.media.movies">
+            <div class="app-content" *ngFor="let midia of characters.media.movies">
+                <div class="ui-g-3 app-content-left">
+                    <p><img [src]="midia.image" [alt]="midia.title" [title]="midia.title"/></p>
+                </div>
+                <div class="ui-g-7 app-content-right">
+                    <div class="app-row">
+                        <h3>Título:</h3>
+                        <p>{{ midia.title }}</p>
+                    </div>
+                    <div class="app-row">
+                        <h3>Ano:</h3>
+                        <p>{{ midia.year }}</p>
+                    </div>
+                    <div class="app-row">
+                        <h3>Descrição:</h3>
+                        <p>{{ midia.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

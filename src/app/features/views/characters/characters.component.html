@@ -1,0 +1,43 @@
+<p-table
+        #dt
+        [columns]="cols"
+        [value]="characters"
+        [autoLayout]="true"
+        [responsive]="true"
+        [paginator]="true"
+        [rows]="10"
+>
+    <ng-template pTemplate="caption">
+        <div style="text-align: left">
+            <p class="app-title-search">Nome do personagem</p>
+            <input
+                    type="search"
+                    class="app-input-search"
+                    pInputText
+                    size="30"
+                    (input)="dt.filterGlobal($event.target.value, 'contains')"
+            />
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                {{ col.header }}
+                <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-character>
+        <tr class="app-tr-table" (click)="onDescribe(character)">
+            <td>
+                <div class="ui-g-4">
+                    <p [style.background]="'url(' + character.avatar + ')'" class="app-title-character-table app-character-image"></p>
+                </div>
+                <div class="ui-g-8">
+                    <p class="app-title-character-table app-character-name">{{ character.name }}</p>
+                </div>
+            </td>
+            <td class="app-description">{{ character.description }}</td>
+        </tr>
+    </ng-template>
+</p-table>
